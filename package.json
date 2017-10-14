@@ -1,7 +1,7 @@
 {
     "name": "damo-cli-l20n-loader",
     "version": "0.0.1",
-    "main": "dist/index",
+    "main": "index.js",
     "author": "baqian <st403471258@gmail.com>",
     "description": "Webpack加载器，用于自动提取L20n国际化文案",
     "keywords": [
