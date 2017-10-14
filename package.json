@@ -1,0 +1,58 @@
+{
+    "name": "@damo/cli-l20n-loader",
+    "version": "0.0.1",
+    "main": "dist/index",
+    "author": "baqian <st403471258@gmail.com>",
+    "description": "Webpack加载器，用于自动提取L20n国际化文案",
+    "keywords": [
+      "damo",
+      "cli",
+      "webpack",
+      "l20n"
+    ],
+    "homepage": "https://github.com/baqian/damo-team/cli-l20n-loader",
+    "dependencies": {
+      "reselect": "^2.0.1",
+      "rxjs": "5.0.0-beta.12",
+      "seamless-immutable": "~6.1.1",
+      "isomorphic-fetch": "~2.1.1",
+      "cuid": "~1.3.8",
+      "recompose": "~0.20.2",
+      "events": "~1.1.1",
+      "react": "^15.0.0",
+      "react-dom": "^15.0.0",
+      "react-redux": "~4.4.5",
+      "react-router": "~2.6.0",
+      "redux-router": "~2.1.2",
+      "react-router-redux": "~4.0.2",
+      "redux": "~3.5.0",
+      "redux-logger": "~2.4.0",
+      "redux-thunk": "~1.0.3",
+      "redux-crud": "~1.0.0",
+      "redux-promise-middleware": "~4.0.0",
+      "react-redux-loading-bar": "~2.4.0",
+      "react-addons-pure-render-mixin": "^15.0.0",
+      "hoist-non-react-statics": "~1.2.0",
+      "react-intl": "~2.1.3",
+      "react-mixin": "~3.0.5",
+      "@ali/naza-rxrc-redux": "~0.0.7"
+    },
+    "devDependencies": {
+      
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/baqian/damo-team/cli-l20n-loader.git"
+    },
+    "readmeFilename": "README.md",
+    "maintainers": [
+      {
+        "name": "baqian",
+        "email": "st403471258@gmail.com"
+      }
+    ],
+    "bugs": {
+      "url": "https://github.com/baqian/damo-team/cli-l20n-loader/issues"
+    },
+    "license": "MIT"
+  }
