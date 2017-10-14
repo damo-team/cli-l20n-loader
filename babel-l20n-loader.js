@@ -41,7 +41,7 @@ module.exports = function (t) {
     global.messageMap = {};
     global.messages = {};
     function getModuleSourceName(opts) {
-        return opts.moduleSourceName || '@ali/aliyun-naza-l20n/dist/rc/l20n';
+        return opts.moduleSourceName || 'damo-l20n';
     }
 
     function storeMessage(discriptor, path, state) {

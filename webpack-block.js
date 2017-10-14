@@ -1,4 +1,4 @@
-var ExtractTextPlugin = require('@ali/naza-extract-plugin');
+var ExtractTextPlugin = require('damo-cli-extract-plugin');
 var path = require('path');
 var filters = require('./lib/filter');
 var L20nPlugin = require('./babel-l20n-plugin');
@@ -30,7 +30,7 @@ module.exports = function l20nWebpckBlock(newWebPackConfig, locals, version) {
   newWebPackConfig[0].module.loaders.push({
     test: new RegExp('\\.' + formAndTo[0] + '\$'),
     //提取json文件到内存，否则最终注入到js文件中
-    loader: langExtractTextPlugin.extract("@ali/naza-l20n-loader/lib/format/" + formAndTo[0] + '/' + formAndTo[1])
+    loader: langExtractTextPlugin.extract("damo-cli-l20n-loader/lib/format/" + formAndTo[0] + '/' + formAndTo[1])
   });
 
   var loaders = newWebPackConfig[0].module.loaders;
@@ -40,7 +40,7 @@ module.exports = function l20nWebpckBlock(newWebPackConfig, locals, version) {
       jsLoader[0] = Object.assign({}, loaders[i]);
       if(loaders[i].query && loaders[i].query.plugins){
         loaders[i].query.cacheDirectory = !locals.nocache;
-        loaders[i].query.plugins.push(['@ali/naza-l20n-loader/babel-l20n-loader', {
+        loaders[i].query.plugins.push(['damo-cli-l20n-loader/babel-l20n-loader', {
           duplicate: !!locals.duplicate,
           filenames: locals.duplicateFileNames ? locals.duplicateFileNames.map(function(filename){ return path.join(assetPath, filename)}) : null
         }]);
@@ -72,7 +72,7 @@ module.exports = function l20nWebpckBlock(newWebPackConfig, locals, version) {
         module: {
           loaders: jsLoader.concat([{
             test: new RegExp('\\.' + formAndTo[0] + '\$'),
-            loader: langExtractTextPlugin.extract("@ali/naza-l20n-loader/lib/format/" + formAndTo[0] + '/' + formAndTo[1], {
+            loader: langExtractTextPlugin.extract("damo-cli-l20n-loader/lib/format/" + formAndTo[0] + '/' + formAndTo[1], {
               filename: filename
             })
           }])
